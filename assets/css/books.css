@@ -1,0 +1,168 @@
+/* Header area test styling */
+.headerArea {
+  padding:0px 10px 0px 40px; 
+  text-align: left;  
+  margin-top:40px;
+}
+
+h1 {
+  margin-left:450px; 
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 24px;
+  margin-bottom:40px;
+}
+
+h2 {
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 18px;
+  color: #228;
+}
+
+/* Table area (left side) styles */
+/* Set a fixed scrollable wrapper */
+.tableWrap {
+  height: 330px;
+  border: 1px solid black;
+  overflow: auto;
+}
+
+/* Set header to stick to the top of the container. */
+#book-table thead tr th {
+  position: sticky;
+  top: 0;
+}
+
+/* Because we must set sticky on th,
+ we have to apply background styles here
+ rather than on thead */
+#book-table th {
+  padding:3px 3px 3px 15px; 
+  border-left: 1px dotted rgba(200, 209, 224, 0.6);
+  border-bottom: 1px solid #e8e8e8;
+  text-transform: uppercase;
+  background: #00cccc;
+  text-align: left;
+  /* With border-collapse, we must use box-shadow or psuedo elements
+  for the header borders */
+  box-shadow: 0px 0px 0 2px #e8e8e8;
+}
+
+/* Hide the Id column (header & row) */
+#book-table tr td:nth-child(1), #book-table th:nth-child(1) {
+    display: none;
+}
+
+
+/* Set colum widths for Authot & title columns */
+#book-table tr th:nth-child(2) {
+  width: 200px;
+}
+
+#book-table tr th:nth-child(3) {
+  width: 400px;
+}
+
+/* Zebra stripe the table */
+#book-table tr:nth-child(even) {
+  background-color: #c0e3e6;
+}
+
+
+#book-table td {
+  padding:3px 3px 3px 15px; 
+}
+
+#book-table tbody tr {
+  border-bottom: 2px solid #e8e8e8;
+}
+
+#book-table thead {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+#book-table tr:hover {
+  background: #e6f7ff;
+}
+
+
+/* This should be after the zebra stripe and hover setting */
+#book-table tr.selected {
+  background-color: #A788FF; 
+}
+
+/* Form area (right side) styles */
+#form_area{
+  width:520px;
+  height:330px;
+  margin-top:0px;
+  margin-left:5px; 
+  margin-bottom:auto;
+  margin-right:auto;  
+}
+
+form{
+  width:520px;
+  height:280px;
+  padding:30px 20px 20px;
+  background:linear-gradient(#fff,#ABDBFF);
+  border:1px solid black;
+  box-shadow:0 0 2px;
+  font-family:'Marcellus',serif;
+  float:left;
+  margin-left:5px; 
+  margin-right:auto;  
+}
+
+label{
+  font-size:17px
+}
+
+input.book_title {
+  margin-top:5px;
+  font-size:17px;
+  width:500px;
+  margin-bottom:5px;
+}
+
+input.book_author {
+  margin-top:5px;
+  font-size:17px;
+  width:500px;
+  margin-bottom:5px;
+}
+
+input.book_description {
+  margin-top:5px;
+  font-size:17px;
+  width:500px;
+  
+}
+
+input.submit_btn {
+  padding:3px 5px 3px 5px; 
+  margin-top:20px;
+  margin-right:5px;
+  font-size:18px;
+  background:linear-gradient(#c3d2d2 5%,#d2d7d9 100%);
+  cursor:pointer;
+  text-shadow:0 1px 0 #13506D
+}
+
+input.submit_btn:hover {
+  background:linear-gradient(#36caf0 5%,#22abe9 100%)
+}
+
+/* Error message properties */
+#formerrmsg {
+  font-size: 22px;
+  font-weight: 600;
+  color: red;
+}
+
+/* Bottom area styles */
+.bottomArea {
+  margin-top:40px;
+  margin-left:25px;
+  font-weight: bold;
+}
